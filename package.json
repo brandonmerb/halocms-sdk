@@ -8,9 +8,9 @@
     "email": "brandom.m.erb@gmail.com"
   },
   "dependencies": {
-    "@atomicdesign/atomic-origin": "latest",
-    "@atomicdesign/atomic-vue": "latest",
-    "@atomicdesign/atomic-singularity": "latest"
+    "@atomicdesign/atomic-origin": "1.0.0",
+    "@atomicdesign/atomic-vue": "1.0.0",
+    "@atomicdesign/atomic-singularity": "1.0.0"
   },
   "scripts": {
     "clean": "rimraf ./dist",
