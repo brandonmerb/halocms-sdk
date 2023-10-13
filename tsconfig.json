@@ -38,7 +38,25 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      
+      "@modules/*": [
+        "src/modules/*"
+      ],
+
+      "@layout": [
+        "src/modules/layout/index.ts"
+      ],
+      "@layout/*": [
+        "src/modules/layout/*"
+      ],
+
+      "@authentication": [
+        "src/modules/authentication/index.ts"
+      ],
+      "@authentication/*": [
+        "src/modules/authentication/*"
+      ],
     },
 
     // The below options are mostly for code base lint-y things

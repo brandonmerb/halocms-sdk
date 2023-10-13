@@ -1,5 +1,3 @@
-import { type AtomicModuleInterface, createModule } from '@atomicdesign/atomic-singularity'
+export type * from './interfaces/halocms-module.interface';
 
-export const halocmsSdkModule: AtomicModuleInterface = createModule({
-  name: "halocms-sdk"
-})
+export * from './defaults/default-modules.const';

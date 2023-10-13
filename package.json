@@ -8,6 +8,8 @@
     "email": "brandom.m.erb@gmail.com"
   },
   "dependencies": {
+    "@atomicdesign/atomic-origin": "latest",
+    "@atomicdesign/atomic-vue": "latest",
     "@atomicdesign/atomic-singularity": "latest"
   },
   "scripts": {
@@ -29,5 +31,22 @@
     "dist/**/*.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ]
+  ],
+
+  "exports": {
+    ".": [
+      "./dist/src/*",
+      "./dist/src/index.js"
+    ],
+
+    "./modules/authentication": "./dist/src/modules/authentication/index.js",
+    "./modules/authentication/*": [
+      "./dist/src/modules/authentication/*"
+    ],
+
+    "./modules/layout": "./dist/src/modules/layout/index.js",
+    "./modules/layout/*": [
+      "./dist/src/modules/layout/*"
+    ]
+  }
 }
