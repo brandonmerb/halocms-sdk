@@ -1,6 +1,6 @@
+import { type HaloCMSModule } from '@/index';
 import { createModule } from '@atomicdesign/atomic-singularity'
-import { type AtomicVueModule } from '@atomicdesign/atomic-vue';
 
-export const HaloCMSSDKAuthenticationModule: AtomicVueModule = createModule({
+export const HaloCMSSDKAuthenticationModule: HaloCMSModule = createModule<HaloCMSModule>({
   name: "Halo CMS SDK: Authentication"
 })
