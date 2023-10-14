@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     // Currently we're only targeting support for the latest tools
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+
+    // Sythentic imports to make importing older frameworks easier
+    "allowSyntheticDefaultImports": true,
 
     // We want to emit declaration files
     "declaration": true,
