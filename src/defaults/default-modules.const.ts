@@ -1,11 +1,11 @@
-import { createModule } from '@atomicdesign/atomic-singularity'
+import { MiddlewareUseFunction, createModule } from '@atomicdesign/atomic-singularity'
 import { type HaloCMSModule } from '@/interfaces/halocms-module.interface';
 
 import { HaloCMSSDKAuthenticationModule } from "@authentication";
 import { HaloCMSSDKLayoutModule } from "@layout";
 
 
-export const HaloCMSSDKDefaultModules: HaloCMSModule = createModule({
+export const HaloCMSSDKDefaultModules = createModule<HaloCMSModule>({
   name: "Halo CMS SDK: Default modules",
 
   imports: [
