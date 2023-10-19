@@ -14,9 +14,8 @@
     "@atomicdesign/atomic-vue": "1.0.0"
   },
   "scripts": {
-    "clean": "rimraf ./dist",
-    "build": "npm run clean && npm run build:vite",
-    "build:vite": "vite build -c vite.config.ts"
+    "prebuild": "rimraf ./dist",
+    "build": "vite build -c ./config/vite.config.ts"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
