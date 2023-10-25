@@ -50,9 +50,7 @@ export default defineConfig((config: ConfigEnv): UserConfig => {
         },
         external: [
           "vue",
-          "@atomicdesign/atomic-singularity",
-          "@atomicdesign/atomic-vue",
-          "@atomicdesign/atomic-origin"
+          /^@atomicdesign*/,
         ]
       }
     },
