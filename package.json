@@ -12,7 +12,10 @@
     "@atomicdesign/atomic-origin": "1.0.0",
     "@atomicdesign/atomic-singularity": "1.0.0",
     "@atomicdesign/atomic-vue": "1.0.0",
-    "vue": "^3.3.6"
+    "pinia": "^2.1.7",
+    "vue": "^3.3.6",
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.3.23"
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
