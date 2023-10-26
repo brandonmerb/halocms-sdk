@@ -22,7 +22,6 @@ export default defineConfig((config: ConfigEnv): UserConfig => {
       rollupTypes: true,
     }),
     swc.vite({
-      configFile: './config/.swcrc'
     }),
     vue()
   ]

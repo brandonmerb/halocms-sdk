@@ -8,10 +8,11 @@
 </template>
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { DependencyInjectionMiddleware, Logger, LoggerInterface } from '@atomicdesign/atomic-singularity';
+import { DependencyInjectionMiddleware, LoggerToken, LoggerInterface } from '@atomicdesign/atomic-singularity';
 
 onMounted(() => {
-  const l = DependencyInjectionMiddleware.instance.inject<LoggerInterface>(Logger);
+  const l = DependencyInjectionMiddleware.instance.inject<LoggerInterface>(LoggerToken);
+  console.log(l);
   l.info("This works!!");
 })
 
