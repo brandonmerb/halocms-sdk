@@ -23,7 +23,7 @@
         <!-- If using vue-router -->
         <router-view />
       </v-container>
-      <router-view v-else/>
+      <router-view v-else />
     </v-main>
 
     <v-footer v-if="store.showFooter">
@@ -36,8 +36,17 @@
 import { onMounted, ref } from 'vue';
 import { LoggerToken, LoggerInterface, useDI, SystemVersionToken } from '@atomicdesign/atomic-singularity';
 import { useLayoutStore } from '../layout.store';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const store = useLayoutStore();
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.layout) {
+    console.log(to.meta.layout);
+    store.updateLayoutOptions(to.meta.layout);
+  }
+});
 
 // const di = useDI();
 

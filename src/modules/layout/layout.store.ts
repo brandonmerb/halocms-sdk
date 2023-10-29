@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { Ref, ref } from "vue";
+import { LayoutOptions } from "./layout-options.interface";
 
 export const useLayoutStore = defineStore('layoutStore', () => {
   const pageTitle: Ref<string> = ref('');
@@ -19,6 +20,23 @@ export const useLayoutStore = defineStore('layoutStore', () => {
 
   const showCustomSideNav: Ref<boolean> = ref(false);
 
+  function updateLayoutOptions(layoutOptions: LayoutOptions) {
+    pageTitle.value = layoutOptions.pageTitle ?? "";
+    pageHeading.value = layoutOptions.pageHeading ?? "";
+    showSystemBar.value = layoutOptions.showSystemBar ?? false;
+    showAppBar.value = layoutOptions.showAppBar ?? false;
+    showSideNav.value = layoutOptions.showSideNav ?? false;
+    showMainAsFlex.value = layoutOptions.showMainAsFlex ?? false;
+    showContentInContainer.value = layoutOptions.showContentInContainer ?? false;
+    showContentContainerIsFluid.value = layoutOptions.showContentContainerIsFluid ?? false;
+    showContentContainerFillsHeight.value = layoutOptions.showContentContainerFillsHeight ?? false;
+    showHeader.value = layoutOptions.showHeader ?? false;
+    showHeaderActions.value = layoutOptions.showHeaderActions ?? false;
+    showNavigation.value = layoutOptions.showNavigation ?? false;
+    showFooter.value = layoutOptions.showFooter ?? false;
+    showCustomSideNav.value = layoutOptions.showCustomSideNav ?? false;
+  }
+
   return {
     // State
     pageTitle,
@@ -34,8 +52,9 @@ export const useLayoutStore = defineStore('layoutStore', () => {
     showHeaderActions,
     showNavigation,
     showFooter,
-    showCustomSideNav
+    showCustomSideNav,
 
     // Actions
+    updateLayoutOptions
   }
 })
