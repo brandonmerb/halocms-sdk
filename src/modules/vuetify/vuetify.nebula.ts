@@ -2,21 +2,22 @@ import { HaloCMSNebula } from "@/index";
 import { createNebula } from "@atomicdesign/atomic-singularity";
 
 import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
+import { VuetifyOptions, createVuetify } from 'vuetify'
 
-interface Test1 {
-  evenCoolerKey: string;
-}
-
-interface Test2 {
-  other: number;
-  mainKey: {
-    subKey: string;
-  }
-}
-
-export const useVuetify = createNebula<HaloCMSNebula, Test2 & Test1>({
+export const useVuetify = createNebula<HaloCMSNebula<VuetifyOptions>>({
   name: "Halo CMS SDK: Vuetify",
+
+  imports: [
+    (app: any, module: any) => {console.log(module); return {name: "asdasd"}}
+  ],
+
+  configurationSettings: [
+    {
+      theme: {},
+
+      provider: null
+    }
+  ],
 
   vuePlugins: [
     createVuetify({
@@ -31,7 +32,7 @@ export const useVuetify = createNebula<HaloCMSNebula, Test2 & Test1>({
       }
     })
   ]
-}).build();
+})
   // .addConfigurable("")
   // .addConfiguration("activeTheme", "light", "light")
   // .addConfiguration("")
